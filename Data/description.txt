@@ -1,0 +1,70 @@
+Project Title: Automated Website Testing – Practice Automation
+Author: Eltore Zhaksymurat
+Tool: Robot Framework + SeleniumLibrary
+Browser: Google Chrome (Chromedriver)
+
+------------------------------------------------------------
+PROJECT DESCRIPTION
+------------------------------------------------------------
+This project automates the testing of multiple web functionalities
+on the practice-automation.com website using Robot Framework and SeleniumLibrary.
+
+The goal is to verify that various user interface elements —
+such as forms, buttons, and sliders — work correctly and respond
+as expected. Each test file is dedicated to a specific feature
+and ensures the stability and correctness of that part of the site.
+
+------------------------------------------------------------
+TEST CASES OVERVIEW
+------------------------------------------------------------
+
+1. **Form_Testing.robot**
+   - Opens the “Form Fields” page.
+   - Fills out all form fields (name, password, drinks, favorite color, email, and message).
+   - Selects an option from the dropdown (“Do you like automation?”).
+   - Submits the form and handles the alert message confirming successful submission.
+   - Purpose: To validate data entry, field visibility, and form submission behavior.
+
+2. **Click_Testing.robot**
+   - Navigates to the “Click Events” page.
+   - Clicks each animal button (Cat, Dog, Pig, Cow).
+   - Verifies that the correct text (“Meow!”, “Woof!”, “Oink!”, “Moo!”) appears for each click.
+   - Purpose: To ensure all clickable buttons trigger the right JavaScript response.
+
+3. **Slider_Testing.robot**
+   - Opens the “Sliders” page.
+   - Adjusts the slider value to 100 and back to 0 using JavaScript.
+   - Confirms that the displayed value updates correctly.
+   - Purpose: To test slider interactivity and real-time value updates.
+
+4. **Ads_Testing.robot**
+   - (Example placeholder – can be used for ad pop-up or navigation testing.)
+   - Ensures that ad-related elements load correctly and do not block user interaction.
+   - Purpose: To check user experience flow and ensure no element overlap occurs.
+
+------------------------------------------------------------
+FOLDER STRUCTURE
+------------------------------------------------------------
+Assignment2_testing_Eltore/
+│
+├── Data/
+│   └── description.txt
+│
+├── Resources/
+│   └── chromedriver.exe
+│
+├── Tests/
+│   ├── Ads_Testing.robot
+│   ├── Click_Testing.robot
+│   ├── Form_Testing.robot
+│   └── Slider_Testing.robot
+│
+└── Output/
+    └── (Contains logs, reports, and screenshots)
+
+------------------------------------------------------------
+SUMMARY
+------------------------------------------------------------
+This assignment demonstrates automated web testing with Robot Framework.
+Each test is modular, clearly separated by functionality, and designed
+to provide smooth, human-readable execution logs and screenshots for results.
