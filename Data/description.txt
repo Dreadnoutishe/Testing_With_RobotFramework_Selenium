@@ -1,7 +1,6 @@
-Project Title: Automated Website Testing – Practice Automation
+Project Title: Software Testing and Debugging Homework 3+4
 Author: Eltore Zhaksymurat
-Tool: Robot Framework + SeleniumLibrary
-Browser: Google Chrome (Chromedriver)
+Tool: Robot Framework + SeleniumLibrary + BrowserStack
 
 ------------------------------------------------------------
 PROJECT DESCRIPTION
@@ -51,7 +50,7 @@ Assignment2_testing_Eltore/
 │   └── description.txt
 │
 ├── Resources/
-│   └── chromedriver.exe
+│   └── BrowserStackSetup.resource
 │
 ├── Tests/
 │   ├── Ads_Testing.robot
@@ -62,9 +61,5 @@ Assignment2_testing_Eltore/
 └── Output/
     └── (Contains logs, reports, and screenshots)
 
-------------------------------------------------------------
-SUMMARY
-------------------------------------------------------------
-This assignment demonstrates automated web testing with Robot Framework.
-Each test is modular, clearly separated by functionality, and designed
-to provide smooth, human-readable execution logs and screenshots for results.
+
+

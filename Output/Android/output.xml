@@ -1,0 +1,669 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.10.7 on win32)" generated="2025-11-21T22:16:11.041129" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Users\user\PycharmProjects\Assignment2_testing_Eltore\Tests">
+<suite id="s1-s1" name="Ads Testing" source="C:\Users\user\PycharmProjects\Assignment2_testing_Eltore\Tests\Ads_Testing.robot">
+<test id="s1-s1-t1" name="Ads Modal -&gt; open and close" line="10">
+<kw name="Open BrowserStack Browser" owner="BrowserStackSetup">
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${BROWSER}'=='Chrome'</arg>
+<arg>Open Browser</arg>
+<arg>${URL}</arg>
+<arg>browser=chrome</arg>
+<arg>remote_url=${REMOTE_URL}</arg>
+<arg>desired_capabilities=${CAPS_CHROME}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-11-21T22:16:11.390125" elapsed="0.001007"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-11-21T22:16:11.393136" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
+<msg time="2025-11-21T22:16:11.393136" level="INFO">Opening browser 'firefox' to base url 'https://practice-automation.com/' through remote server at 'https://dreadnoutzhks_tnzqWD:thhsxx1b4gAug2n2xjPN@hub.browserstack.com/wd/hub'.</msg>
+<msg time="2025-11-21T22:16:34.625257" level="INFO">C:\Users\user\PycharmProjects\Assignment2_testing_Eltore\.venv\lib\python3.10\site-packages\selenium\webdriver\remote\remote_connection.py:421: UserWarning: Embedding username and password in URL could be insecure, use ClientConfig instead
+  headers = self.get_remote_connection_headers(parsed_url, self._client_config.keep_alive)</msg>
+<arg>${URL}</arg>
+<arg>remote_url=${REMOTE_URL}</arg>
+<arg>desired_capabilities=${CAPS_ANDROID}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-11-21T22:16:11.392131" elapsed="23.233126"/>
+</kw>
+<arg>'${BROWSER}'=='Android'</arg>
+<arg>Open Browser</arg>
+<arg>${URL}</arg>
+<arg>remote_url=${REMOTE_URL}</arg>
+<arg>desired_capabilities=${CAPS_ANDROID}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-11-21T22:16:11.391132" elapsed="23.235125"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${BROWSER}'=='Edge'</arg>
+<arg>Open Browser</arg>
+<arg>${URL}</arg>
+<arg>browser=edge</arg>
+<arg>remote_url=${REMOTE_URL}</arg>
+<arg>desired_capabilities=${CAPS_EDGE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-11-21T22:16:34.626257" elapsed="0.001001"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-11-21T22:16:34.627258" elapsed="0.637560"/>
+</kw>
+<arg>${BASE URL}</arg>
+<arg>${BROWSER}</arg>
+<status status="PASS" start="2025-11-21T22:16:11.389125" elapsed="23.875693"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-11-21T22:16:35.265817" elapsed="0.501413"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//a[@href='https://practice-automation.com/ads/']</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-21T22:16:35.767230" elapsed="9.666465"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T22:16:46.435833" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T22:16:45.434695" elapsed="1.001138"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-11-21T22:16:46.436834" level="INFO">Executing JavaScript:
+document.querySelector('a[href="https://practice-automation.com/ads/"]').click()
+Without any arguments.</msg>
+<arg>document.querySelector('a[href="https://practice-automation.com/ads/"]').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-11-21T22:16:46.436834" elapsed="0.195342"/>
+</kw>
+<kw name="Close Ad Popup">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=/html/body/div[5]/div/button</arg>
+<arg>7s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-11-21T22:16:46.633177" elapsed="0.192795"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T22:16:53.826862" level="INFO">Slept 7 seconds.</msg>
+<arg>7s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T22:16:46.825972" elapsed="7.001305"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-11-21T22:16:53.828291" level="INFO">Executing JavaScript:
+document.evaluate("/html/body/div[5]/div/button", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.click()
+Without any arguments.</msg>
+<arg>document.evaluate("/html/body/div[5]/div/button", document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue.click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-11-21T22:16:53.827277" elapsed="0.199734"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T22:16:56.029281" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T22:16:54.028025" elapsed="2.001256"/>
+</kw>
+<kw name="Wait Until Element Does Not Contain" owner="SeleniumLibrary">
+<arg>css=html</arg>
+<arg>popmake-active</arg>
+<arg>1s</arg>
+<doc>Waits until the element ``locator`` does not contain ``text``.</doc>
+<status status="PASS" start="2025-11-21T22:16:56.029281" elapsed="0.465281"/>
+</kw>
+<status status="PASS" start="2025-11-21T22:16:46.633177" elapsed="9.861385"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-11-21T22:16:56.495562" elapsed="1.174645"/>
+</kw>
+<doc>Open main page, go to Ads section, wait for popup, close it, and verify it disappears.</doc>
+<status status="PASS" start="2025-11-21T22:16:11.387125" elapsed="46.283082"/>
+</test>
+<status status="PASS" start="2025-11-21T22:16:11.072124" elapsed="46.599082"/>
+</suite>
+<suite id="s1-s2" name="Click Testing" source="C:\Users\user\PycharmProjects\Assignment2_testing_Eltore\Tests\Click_Testing.robot">
+<test id="s1-s2-t1" name="Click Events -&gt; Verify Animal Sounds" line="10">
+<kw name="Open BrowserStack Browser" owner="BrowserStackSetup">
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${BROWSER}'=='Chrome'</arg>
+<arg>Open Browser</arg>
+<arg>${URL}</arg>
+<arg>browser=chrome</arg>
+<arg>remote_url=${REMOTE_URL}</arg>
+<arg>desired_capabilities=${CAPS_CHROME}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-11-21T22:16:57.682212" elapsed="0.000995"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-11-21T22:16:57.684213" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
+<msg time="2025-11-21T22:16:57.684213" level="INFO">Opening browser 'firefox' to base url 'https://practice-automation.com/' through remote server at 'https://dreadnoutzhks_tnzqWD:thhsxx1b4gAug2n2xjPN@hub.browserstack.com/wd/hub'.</msg>
+<arg>${URL}</arg>
+<arg>remote_url=${REMOTE_URL}</arg>
+<arg>desired_capabilities=${CAPS_ANDROID}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-11-21T22:16:57.683207" elapsed="19.452814"/>
+</kw>
+<arg>'${BROWSER}'=='Android'</arg>
+<arg>Open Browser</arg>
+<arg>${URL}</arg>
+<arg>remote_url=${REMOTE_URL}</arg>
+<arg>desired_capabilities=${CAPS_ANDROID}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-11-21T22:16:57.683207" elapsed="19.452814"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${BROWSER}'=='Edge'</arg>
+<arg>Open Browser</arg>
+<arg>${URL}</arg>
+<arg>browser=edge</arg>
+<arg>remote_url=${REMOTE_URL}</arg>
+<arg>desired_capabilities=${CAPS_EDGE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-11-21T22:17:17.136021" elapsed="0.001001"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-11-21T22:17:17.137022" elapsed="0.520989"/>
+</kw>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<status status="PASS" start="2025-11-21T22:16:57.682212" elapsed="19.975799"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-11-21T22:17:17.658011" elapsed="0.175071"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//a[contains(text(),'Click Events')]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-21T22:17:17.833082" elapsed="0.482856"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-11-21T22:17:18.316934" level="INFO">Executing JavaScript:
+document.querySelector('a[href="https://practice-automation.com/click-events/"]').click()
+Without any arguments.</msg>
+<arg>document.querySelector('a[href="https://practice-automation.com/click-events/"]').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-11-21T22:17:18.316934" elapsed="0.172983"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T22:17:20.492015" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T22:17:18.489917" elapsed="2.002098"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-11-21T22:17:20.494049" level="INFO">Executing JavaScript:
+document.querySelector('button[onclick="catSound()"]').click()
+Without any arguments.</msg>
+<arg>document.querySelector('button[onclick="catSound()"]').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-11-21T22:17:20.493049" elapsed="0.145999"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//h2[@id='demo' and text()='Meow!']</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-11-21T22:17:20.639048" elapsed="0.184635"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-11-21T22:17:20.824674" level="INFO">Executing JavaScript:
+document.querySelector('button[onclick="dogSound()"]').click()
+Without any arguments.</msg>
+<arg>document.querySelector('button[onclick="dogSound()"]').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-11-21T22:17:20.824674" elapsed="0.142479"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//h2[@id='demo' and text()='Woof!']</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-11-21T22:17:20.968170" elapsed="0.155762"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-11-21T22:17:21.124934" level="INFO">Executing JavaScript:
+document.querySelector('button[onclick="pigSound()"]').click()
+Without any arguments.</msg>
+<arg>document.querySelector('button[onclick="pigSound()"]').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-11-21T22:17:21.124934" elapsed="0.132227"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//h2[@id='demo' and text()='Oink!']</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-11-21T22:17:21.258242" elapsed="0.141257"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-11-21T22:17:21.399962" level="INFO">Executing JavaScript:
+document.querySelector('button[onclick="cowSound()"]').click()
+Without any arguments.</msg>
+<arg>document.querySelector('button[onclick="cowSound()"]').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-11-21T22:17:21.399962" elapsed="0.142099"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//h2[@id='demo' and text()='Moo!']</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-11-21T22:17:21.543061" elapsed="0.459101"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-11-21T22:17:26.867346" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-11-21T22:17:22.003155" elapsed="4.864191"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-11-21T22:17:26.868343" elapsed="0.969740"/>
+</kw>
+<doc>Opens Click Events page, clicks each animal button, and verifies the displayed sound text.</doc>
+<status status="PASS" start="2025-11-21T22:16:57.681213" elapsed="30.156870"/>
+</test>
+<status status="PASS" start="2025-11-21T22:16:57.672206" elapsed="30.166868"/>
+</suite>
+<suite id="s1-s3" name="Form Testing" source="C:\Users\user\PycharmProjects\Assignment2_testing_Eltore\Tests\Form_Testing.robot">
+<test id="s1-s3-t1" name="Form Fields -&gt; Fill and Submit" line="10">
+<kw name="Open BrowserStack Browser" owner="BrowserStackSetup">
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${BROWSER}'=='Chrome'</arg>
+<arg>Open Browser</arg>
+<arg>${URL}</arg>
+<arg>browser=chrome</arg>
+<arg>remote_url=${REMOTE_URL}</arg>
+<arg>desired_capabilities=${CAPS_CHROME}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-11-21T22:17:27.852092" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-11-21T22:17:27.854067" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
+<msg time="2025-11-21T22:17:27.854067" level="INFO">Opening browser 'firefox' to base url 'https://practice-automation.com/' through remote server at 'https://dreadnoutzhks_tnzqWD:thhsxx1b4gAug2n2xjPN@hub.browserstack.com/wd/hub'.</msg>
+<arg>${URL}</arg>
+<arg>remote_url=${REMOTE_URL}</arg>
+<arg>desired_capabilities=${CAPS_ANDROID}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-11-21T22:17:27.853075" elapsed="15.972146"/>
+</kw>
+<arg>'${BROWSER}'=='Android'</arg>
+<arg>Open Browser</arg>
+<arg>${URL}</arg>
+<arg>remote_url=${REMOTE_URL}</arg>
+<arg>desired_capabilities=${CAPS_ANDROID}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-11-21T22:17:27.853075" elapsed="15.973148"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${BROWSER}'=='Edge'</arg>
+<arg>Open Browser</arg>
+<arg>${URL}</arg>
+<arg>browser=edge</arg>
+<arg>remote_url=${REMOTE_URL}</arg>
+<arg>desired_capabilities=${CAPS_EDGE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-11-21T22:17:43.826223" elapsed="0.000000"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-11-21T22:17:43.827206" elapsed="0.614743"/>
+</kw>
+<arg>${BASE URL}</arg>
+<arg>${BROWSER}</arg>
+<status status="PASS" start="2025-11-21T22:17:27.851072" elapsed="16.590877"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-11-21T22:17:44.441949" elapsed="0.150203"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T22:17:45.593260" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T22:17:44.593152" elapsed="1.000108"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-11-21T22:17:45.594977" level="INFO">Executing JavaScript:
+document.querySelector('a[href="https://practice-automation.com/form-fields/"]').click()
+Without any arguments.</msg>
+<arg>document.querySelector('a[href="https://practice-automation.com/form-fields/"]').click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-11-21T22:17:45.593940" elapsed="0.156272"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T22:17:47.752692" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T22:17:45.751207" elapsed="2.001485"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-11-21T22:17:47.753672" level="INFO">Executing JavaScript:
+document.getElementById("name-input").value = "James Watson"
+Without any arguments.</msg>
+<arg>document.getElementById("name-input").value = "James Watson"</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-11-21T22:17:47.752692" elapsed="0.473443"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T22:17:49.227499" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T22:17:48.226135" elapsed="1.001364"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-11-21T22:17:49.228497" level="INFO">Executing JavaScript:
+document.querySelector('input[type="password"]').value = "TestPass123"
+Without any arguments.</msg>
+<arg>document.querySelector('input[type="password"]').value = "TestPass123"</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-11-21T22:17:49.227499" elapsed="0.443008"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T22:17:50.673150" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T22:17:49.670507" elapsed="1.002643"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-11-21T22:17:50.674170" level="INFO">Executing JavaScript:
+document.getElementById("drink1").click()
+Without any arguments.</msg>
+<arg>document.getElementById("drink1").click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-11-21T22:17:50.674170" elapsed="0.137350"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T22:17:51.813440" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T22:17:50.812531" elapsed="1.000909"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-11-21T22:17:51.814491" level="INFO">Executing JavaScript:
+document.getElementById("drink3").click()
+Without any arguments.</msg>
+<arg>document.getElementById("drink3").click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-11-21T22:17:51.813440" elapsed="0.139499"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T22:17:52.954215" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T22:17:51.952939" elapsed="1.001276"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-11-21T22:17:52.955194" level="INFO">Executing JavaScript:
+document.getElementById("color2").click()
+Without any arguments.</msg>
+<arg>document.getElementById("color2").click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-11-21T22:17:52.954215" elapsed="0.132393"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T22:17:54.088723" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T22:17:53.087609" elapsed="1.001656"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-11-21T22:17:54.090279" level="INFO">Executing JavaScript:
+document.getElementById("automation").value = "yes"
+Without any arguments.</msg>
+<arg>document.getElementById("automation").value = "yes"</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-11-21T22:17:54.089265" elapsed="0.128302"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T22:17:55.218996" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T22:17:54.217567" elapsed="1.001986"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-11-21T22:17:55.220550" level="INFO">Executing JavaScript:
+document.getElementById("email").value = "james.watson@example.com"
+Without any arguments.</msg>
+<arg>document.getElementById("email").value = "james.watson@example.com"</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-11-21T22:17:55.220550" elapsed="0.130186"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T22:17:56.353542" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T22:17:55.351707" elapsed="1.001835"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-11-21T22:17:56.354545" level="INFO">Executing JavaScript:
+document.getElementById("message").value = "This is a test message for automation practice."
+Without any arguments.</msg>
+<arg>document.getElementById("message").value = "This is a test message for automation practice."</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-11-21T22:17:56.353542" elapsed="0.138033"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T22:17:57.493060" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T22:17:56.492575" elapsed="1.000485"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-11-21T22:17:57.494060" level="INFO">Executing JavaScript:
+document.getElementById("submit-btn").click()
+Without any arguments.</msg>
+<arg>document.getElementById("submit-btn").click()</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-11-21T22:17:57.493060" elapsed="0.284510"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T22:17:58.778632" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T22:17:57.778557" elapsed="1.000075"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-11-21T22:18:06.358285" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-11-21T22:17:58.779628" elapsed="7.578657"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-11-21T22:18:06.358285" elapsed="1.085425"/>
+</kw>
+<doc>Opens the form fields page, fills out the form with example data, and submits it.</doc>
+<status status="PASS" start="2025-11-21T22:17:27.850068" elapsed="39.593642"/>
+</test>
+<status status="PASS" start="2025-11-21T22:17:27.841066" elapsed="39.603646"/>
+</suite>
+<suite id="s1-s4" name="Slider Testing" source="C:\Users\user\PycharmProjects\Assignment2_testing_Eltore\Tests\Slider_Testing.robot">
+<test id="s1-s4-t1" name="Slider -&gt; Move to 100 and Back to 0" line="10">
+<kw name="Open BrowserStack Browser" owner="BrowserStackSetup">
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${BROWSER}'=='Chrome'</arg>
+<arg>Open Browser</arg>
+<arg>${URL}</arg>
+<arg>browser=chrome</arg>
+<arg>remote_url=${REMOTE_URL}</arg>
+<arg>desired_capabilities=${CAPS_CHROME}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-11-21T22:18:07.460711" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-11-21T22:18:07.462716" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
+<msg time="2025-11-21T22:18:07.462716" level="INFO">Opening browser 'firefox' to base url 'https://practice-automation.com/' through remote server at 'https://dreadnoutzhks_tnzqWD:thhsxx1b4gAug2n2xjPN@hub.browserstack.com/wd/hub'.</msg>
+<arg>${URL}</arg>
+<arg>remote_url=${REMOTE_URL}</arg>
+<arg>desired_capabilities=${CAPS_ANDROID}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-11-21T22:18:07.461711" elapsed="36.608367"/>
+</kw>
+<arg>'${BROWSER}'=='Android'</arg>
+<arg>Open Browser</arg>
+<arg>${URL}</arg>
+<arg>remote_url=${REMOTE_URL}</arg>
+<arg>desired_capabilities=${CAPS_ANDROID}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-11-21T22:18:07.461711" elapsed="36.608367"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${BROWSER}'=='Edge'</arg>
+<arg>Open Browser</arg>
+<arg>${URL}</arg>
+<arg>browser=edge</arg>
+<arg>remote_url=${REMOTE_URL}</arg>
+<arg>desired_capabilities=${CAPS_EDGE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-11-21T22:18:44.070078" elapsed="0.001002"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-11-21T22:18:44.071080" elapsed="0.686079"/>
+</kw>
+<arg>${BASE URL}</arg>
+<arg>${BROWSER}</arg>
+<status status="PASS" start="2025-11-21T22:18:07.459714" elapsed="37.297445"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-11-21T22:18:44.757159" elapsed="0.714055"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T22:18:46.472235" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T22:18:45.471214" elapsed="1.001584"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//a[contains(text(),'Sliders')]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-21T22:18:46.473577" elapsed="0.829086"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=//a[contains(text(),'Sliders')]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-11-21T22:18:47.303640" elapsed="1.979153"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-21T22:18:49.283793" level="INFO">Clicking element 'xpath=//a[contains(text(),'Sliders')]'.</msg>
+<arg>xpath=//a[contains(text(),'Sliders')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-21T22:18:49.283793" elapsed="2.763208"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T22:18:54.048652" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T22:18:52.047001" elapsed="2.002212"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=slideMe</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-21T22:18:54.049213" elapsed="1.152489"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-11-21T22:18:55.202704" level="INFO">Executing JavaScript:
+document.getElementById('slideMe').value = 100; document.getElementById('value').innerText = 100;
+Without any arguments.</msg>
+<arg>document.getElementById('slideMe').value = 100; document.getElementById('value').innerText = 100;</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-11-21T22:18:55.201702" elapsed="0.500451"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-11-21T22:18:57.085256" level="INFO">${val100} = 100</msg>
+<var>${val100}</var>
+<arg>id=slideMe</arg>
+<arg>value</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-11-21T22:18:55.703148" elapsed="1.382108"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${val100}</arg>
+<arg>100</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-11-21T22:18:57.086257" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>✅ Slider moved to 100 successfully.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-11-21T22:18:57.087244" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T22:19:00.089050" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T22:18:57.087244" elapsed="3.001806"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2025-11-21T22:19:00.090097" level="INFO">Executing JavaScript:
+document.getElementById('slideMe').value = 0; document.getElementById('value').innerText = 0;
+Without any arguments.</msg>
+<arg>document.getElementById('slideMe').value = 0; document.getElementById('value').innerText = 0;</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2025-11-21T22:19:00.089050" elapsed="0.138565"/>
+</kw>
+<kw name="Get Element Attribute" owner="SeleniumLibrary">
+<msg time="2025-11-21T22:19:00.646365" level="INFO">${val0} = 0</msg>
+<var>${val0}</var>
+<arg>id=slideMe</arg>
+<arg>value</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="PASS" start="2025-11-21T22:19:00.228628" elapsed="0.417737"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${val0}</arg>
+<arg>0</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-11-21T22:19:00.647377" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>✅ Slider moved to 0 successfully.</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-11-21T22:19:00.648360" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-21T22:19:02.650665" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-21T22:19:00.649358" elapsed="2.001307"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-11-21T22:19:24.640109" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-11-21T22:19:02.651702" elapsed="21.988407"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-11-21T22:19:24.641109" elapsed="0.967589"/>
+</kw>
+<status status="PASS" start="2025-11-21T22:18:07.459714" elapsed="78.149983"/>
+</test>
+<status status="PASS" start="2025-11-21T22:18:07.445721" elapsed="78.163976"/>
+</suite>
+<status status="PASS" start="2025-11-21T22:16:11.044129" elapsed="194.567567"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="4" fail="0" skip="0">Tests</stat>
+<stat name="Ads Testing" id="s1-s1" pass="1" fail="0" skip="0">Tests.Ads Testing</stat>
+<stat name="Click Testing" id="s1-s2" pass="1" fail="0" skip="0">Tests.Click Testing</stat>
+<stat name="Form Testing" id="s1-s3" pass="1" fail="0" skip="0">Tests.Form Testing</stat>
+<stat name="Slider Testing" id="s1-s4" pass="1" fail="0" skip="0">Tests.Slider Testing</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-11-21T22:16:11.393136" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
+<msg time="2025-11-21T22:16:57.684213" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
+<msg time="2025-11-21T22:17:27.854067" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
+<msg time="2025-11-21T22:18:07.462716" level="WARN">desired_capabilities has been deprecated and removed. Please use options to configure browsers as per documentation.</msg>
+</errors>
+</robot>
